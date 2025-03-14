@@ -11,6 +11,7 @@ dclient: bin/dclient
 
 folders:
 	@mkdir -p src include obj bin tmp
+	@echo "Created Folders!"
 
 bin/dserver: obj/dserver.o
 	$(CC) $(LDFLAGS) $^ -o $@
@@ -24,3 +25,4 @@ obj/%.o: src/%.c
 
 clean:
 	rm -f obj/* tmp/* bin/*
+	@echo "Everything Cleaned!" 
